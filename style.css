@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    border: none;
+    outline: none;
+    font-family: "Bitter", sans-serif;
+}
+
+body {
+    background-color: #fbfbfb;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 12px;
+}
+
+.array {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    gap: 12px;
+}
+
+.element {
+    min-width: 48px;
+    height: 48px;
+    background-color: #343a40;
+    color: #fbfbfb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.animation-out {
+    animation: slide-out 0.5s 1 ease-in;
+    -webkit-animation: slide-out 0.5s 1 ease-in;
+}
+
+.animation-in {
+    animation: slide-in 0.5s 1 ease-out;
+    -webkit-animation: slide-in 0.5s 1 ease-out;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+}
+
+.btns-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btns-container button {
+    padding: 10px 30px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    color: #fbfbfb;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    font-size: 16px;
+}
+
+.btns-container .btn-primary {
+    background-color: #007bff;
+}
+
+.btns-container .btn-danger {
+    background-color: #dc3545;
+}
+
+.btns-container .btn-warning {
+    background-color: #ffc107;
+    color: #343a40;
+}
+
+.btns-container .btn-success {
+    background-color: #28a745;
+}
+
+.btns-container button:hover {
+    opacity: 0.8;
+}
+
+.btns-container button:disabled {
+    opacity: 0.6;
+}
